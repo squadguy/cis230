@@ -4,7 +4,7 @@
 class Round
 {
 public:
-	Round(int, int, int);
+	Round();
 
 	void setLowerLimit();
 	void setUpperLimit();
@@ -14,7 +14,7 @@ public:
 	int getUpperLimit() const;
 	void setFahrenheit(int);
 	int getFahreheit () const;
-	void displayInfo(int, int) const;
+	//void displayInfo() const;
 
 private:
 	int lowerLimit;

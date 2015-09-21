@@ -4,7 +4,7 @@
 class Date 
 {
 public:
-	Date (int m, int d, int y);
+	Date ();
 
 	void setMonth (int m);
 	int getMonth() const;

@@ -26,7 +26,7 @@ int main ()
 	Account accountOne(-1300);
 		
 	//Displays the intial balance
-	cout << accountOne.getBalance() << endl;
+	cout << "accountOne balance is: " << accountOne.getBalance() << endl;
 
 	//Credit amount to instances
 	accountOne.creditBalance(200);

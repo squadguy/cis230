@@ -1,13 +1,13 @@
 #include <iostream>
+#include "round.h"
 
 using namespace std;
 
-int toFehrenheit(int);
-int getLowerLimit();
-
 int main()
+
 {
 
+/*******************************************
 	//int intTemp;
 	int lowerLimit; //intial temp in C
 	int upperLimit; //highest temp in c
@@ -69,4 +69,15 @@ int getLowerLimit()
 	while(lowerLimit < 0);	
 
 	return lowerLimit;
+}
+******************************/
+
+cout << "Round One" << endl;
+
+Round roundOne();
+
+
+
+return 0;
+
 }

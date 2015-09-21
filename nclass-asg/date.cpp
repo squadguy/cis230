@@ -4,9 +4,11 @@
 using namespace std;
 
 Date::Date (int m, int d, int y)
-	: day(d), year (y)
+	
 {
 	setMonth(m);
+	setDay(d);
+	setYear(y);
 }
 
 void Date::setMonth(int m)
@@ -42,5 +44,5 @@ int Date::getYear() const
 }
 void Date::displayDate() const
 {
-	cout << month << "/" << day << "/" << year << endl;
+	cout << getMonth() << "/" << getDay() << "/" << getYear() << endl;
 }

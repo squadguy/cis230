@@ -2,12 +2,11 @@
 #include <iostream>
 using namespace std;
 
-Round::Round(int _lowerLimit, int _upperLimit, int _interval
+Round::Round()
 {
-
-	lowerLimit = _lowerLimit;
-	upperLimit = _upperLimit;
-	interval = _interval;
+	setUpperLimit();
+	setLowerLimit();
+	setInterval();
 
 }
 
@@ -19,10 +18,10 @@ void Round::setLowerLimit()
 		cout << "Lower limit must be >=0." << endl;
 		cin >> lowerLimit;
 	}
-	while(lowerLimit >= 0 && <=5000);
+	while(lowerLimit >= 0 && lowerLimit <= 5000);
 }
 
-void setUpperLimit()
+void Round::setUpperLimit()
 {
 	do
 	{
@@ -33,7 +32,7 @@ void setUpperLimit()
 	while(upperLimit <=5000 && upperLimit >= 0);
 }
 
-void setInterval()
+void Round::setInterval()
 {
 	do
 	{
@@ -41,34 +40,36 @@ void setInterval()
 		cout << "Interval must be less than upper limit: " << upperLimit << endl;
 		cin >> interval;
 	}
-	while(interval > upperLimit)		
+	while(interval > upperLimit);		
 }
 
-int getInterval() const
+int Round::getInterval() const
 {
 	return interval;
 }
 
-int getLowerLimit() const
+int Round::getLowerLimit() const
 {
 	return lowerLimit;
 }
 
-int getUpperLimit() const
+int Round::getUpperLimit() const
 {
 	return upperLimit;
 }
 
-void setFahrenheit(int)
+void Round::setFahrenheit(int)
 {
-	inFahrenheit = getLowerLimit() * 5/9 + 32;
+	inFahreheit = getLowerLimit() * 5/9 + 32;
 }
-int getFahreheit () const 
+int Round::getFahreheit () const 
 {
-	return inFahrenheit;
+	return inFahreheit;
 }
 
-void displayInfo ()
+/**********
+void Round::displayInfo()
 {
 	cout << getLowerLimit() << "    " << getFahreheit() << endl;
 }
+**********/
