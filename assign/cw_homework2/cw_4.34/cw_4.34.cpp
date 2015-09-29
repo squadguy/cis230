@@ -16,7 +16,17 @@ int factorial(int);
 int main()
 {
 
+	int num;
+
+	cout << "Enter a positive integer" << endl;
+	cin >> num;
+
+	cout << num <<"! = " << factorial(num) << endl;
+
 //For loop displays results of factorial function up to 10
+	
+
+	
 
 	for (int i = 1; i < 11; i++)
 		{
@@ -32,7 +42,7 @@ int main()
 			int fac = 1;
 			int init = 1;
 
-			while (init <=num)
+			while (init <= num)
 			{
 				fac = fac * init;
 				init ++; 
