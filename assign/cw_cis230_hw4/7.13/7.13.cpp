@@ -5,7 +5,7 @@
 //Notes:    Written with Vim. Orignially compiled with gcc compiler.
 
 #include <iostream>
-#include <vector>
+#include <array>
 
 using namespace std;
 
@@ -14,7 +14,7 @@ int main()
 	const int SIZE = 20; //set size of array
 	const int UPPERLIMIT = 100; //set upperlimit of number range
 	const int LOWERLIMIT = 10;// set lowerlimit of number range
-	vector <int> linuxBeastVector( SIZE ); //create array for numbers
+	array <int, SIZE> linuxBeastArray = {}; //create array for numbers
 	int i = 0; //loop variable
 	int j = 0; //loop variable
 	int survior = 0; //create placeholder for nonduplicates
@@ -27,7 +27,7 @@ int main()
 
 	cout << "*************************************" << endl;
 	cout << "*                                   *" << endl;
-	cout << "*        LINUX BEAST VECTOR         *" << endl;
+	cout << "*        LINUX BEAST ARRAY          *" << endl;
 	cout << "*                                   *" << endl;
 	cout << "*         CIS 230 - RULES!          *" << endl;
 	cout << "*                                   *" << endl; 
@@ -82,7 +82,7 @@ int main()
 		//flag if number already in array	
 		for (j = 0; j < i; j++)
 		{
-			if (hold == linuxBeastVector[j])
+			if (hold == linuxBeastArray[j])
 			{	
 				flag = true;
 				cout << "Duplicate detected --- destroying \n" << endl;//inform player their duplicated number has been destroyed
@@ -92,7 +92,7 @@ int main()
 		//include nonflagged number into surviors - increase non duplicate index
 		if (flag == false)
 		{
-			linuxBeastVector[survior] = hold;
+			linuxBeastArray[survior] = hold;
 			survior++;
 		}
 			
@@ -108,9 +108,9 @@ int main()
 	cout << "-----------------------------------------" << endl;
 
 	//print data when it is not 0	
-	for(i = 0; linuxBeastVector[i] != 0; i++)
+	for(i = 0; linuxBeastArray[i] != 0; i++)
 		{
-			cout << linuxBeastVector[i] << " ";
+			cout << linuxBeastArray[i] << " ";
 		}
 	cout << endl;
 	cout << endl;
@@ -120,5 +120,4 @@ int main()
 	cout << "************************" << endl;
 	
 	return 0;
-
 }

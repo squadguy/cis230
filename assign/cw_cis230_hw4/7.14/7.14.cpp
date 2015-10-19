@@ -36,9 +36,9 @@ int main()
 	cout << endl;
 	cout << endl;
 	
-	cout << "Challenge the Linux Beast Array!" << endl;
+	cout << "Challenge the Linux Beast Vector!" << endl;
 	cout << "Simply enter 20 numbers between " << LOWERLIMIT << " and " << UPPERLIMIT << "!!!" << endl;
-	cout << "The Linux Beast Array will destroy any duplicates and print out the survivors !" << endl;
+	cout << "The Linux Beast vector will destroy any duplicates and print out the survivors !" << endl;
 	cout << endl;
 
 	cout << "Begin!!!" << endl;
@@ -102,7 +102,7 @@ int main()
 	//Print the nonduplicate number
 	cout << endl;
 	cout << "-----------------------------------------" << endl;
-	cout << "LINUX-BEAST-ARRAY" << endl;
+	cout << "LINUX-BEAST-VECTOR" << endl;
 	cout << "-----------------------------------------" << endl;
 	cout << "PRINTING THE SURVIVORS " << endl;
 	cout << "-----------------------------------------" << endl;
