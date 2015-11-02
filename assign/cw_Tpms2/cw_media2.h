@@ -1,5 +1,5 @@
-#ifndef CW_MEDIA_H
-#define CW_MEDIA_H
+#ifndef CW_MEDIA2_H
+#define CW_MEDIA2_H
 
 #include<iostream>
 #include<vector>
@@ -7,26 +7,26 @@
 
 using namespace std;
 
-class Book 
+class Music
 {
-	friend ostream & operator<<( ostream &, const Book &);
+	friend ostream &operator<<(ostream &, const Music &);
 	public:
-		Book(string, string, string, string, string);
-		Book(string, string, string, string);
-		Book(string, string, string);
+		Music(string, string, string, string, string);
+		Music(string, string, string, string);
+		Music(string, string, string);
 		void setTitle(string);
-		string getTitle();
 		void setMediaType(string);
-		string getMediaType();
 		void setGenre(string);
-		string getGenre();
 		void setComposer(string);
-		string getComposer();
 		void setYear(string);
+		string getTitle();
+		string getMediaType();
+		string getGenre();
+		string getComposer();
 		string getYear();
 		string toString();
-//		string operator<<(Media);
-
+		
+		
 	private:
 		string title;
 		string composer;

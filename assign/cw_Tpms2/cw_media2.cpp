@@ -1,11 +1,11 @@
 #include<iostream>
 #include<vector>
 #include<string>
-#include "cw_media.h"
+#include "cw_media2.h"
 
 using namespace std;
 
-Book::Book(string _title, string _composer, string _mediaType, string _genre, string _year)
+Music::Music(string _title, string _composer, string _mediaType, string _genre, string _year)
 {
 	setTitle(_title);
 	setComposer(_composer);
@@ -14,7 +14,7 @@ Book::Book(string _title, string _composer, string _mediaType, string _genre, st
 	setYear(_year);
 }
 
-Book::Book(string _title, string _composer, string _mediaType, string _genre)
+Music::Music(string _title, string _composer, string _mediaType, string _genre)
 {
 	setTitle(_title);
 	setComposer(_composer);
@@ -22,72 +22,72 @@ Book::Book(string _title, string _composer, string _mediaType, string _genre)
 	setGenre(_genre);
 }
 
-Book::Book(string _title, string _composer, string _mediaType)
+Music::Music(string _title, string _composer, string _mediaType)
 {
 	setTitle(_title);
 	setComposer(_composer);
 	setMediaType(_mediaType);
 }
 
-void Book::setTitle(string _title)
+void Music::setTitle(string _title)
 {
 	title = _title;
 }
 
-string Book::getTitle()
+string Music::getTitle()
 {
 	return title;
 }
 
-void Book::setMediaType(string _mediaType)
+void Music::setMediaType(string _mediaType)
 {
 	mediaType = _mediaType;
 }
 
-string Book::getMediaType()
+string Music::getMediaType()
 {
 	return mediaType;
 }
 
-void Book::setGenre(string _genre)
+void Music::setGenre(string _genre)
 {
 	genre = _genre;
 }
 
-string Book::getGenre()
+string Music::getGenre()
 {
 	return genre;
 }
 
-void Book::setComposer(string _composer)
+void Music::setComposer(string _composer)
 {
 	composer = _composer;
 }
 
-string Book::getComposer()
+string Music::getComposer()
 {
 	return composer;
 }
 
-void Book::setYear(string _year)
+void Music::setYear(string _year)
 {
 	year = _year;
 }
 
-string Book::getYear()
+string Music::getYear()
 {
 	return year;
 }
 
 /****************************
-string Media::toString()
+string Music::toString()
 {
 	string x = "title: " + title  + "Composer: " + composer + "Category: " + mediaType + "Genre: " + genre + "Year: " + year;
 }
 ***************************/
 
 /*
-string Book::toString()
+string Music::toString()
 {
 	string x = "Title: " + this->getTitle() + "\n" + "Composer: " + getComposer() + "\n" + "Catagory: " +this->getMediaType() + "\n" + "Genre: " + this->getGenre() + "\n" + "Year: " + this->getYear() + "\n";
 	
@@ -96,9 +96,9 @@ string Book::toString()
 */
 
 
-ostream &operator<<( ostream &output, const Book &book )
+ostream &operator<<( ostream &output, const Music &song)
 {
-	output << "Title: " + book.title + "\n" + "Composer: " + book.composer + "\n" + "Catagory: " + book.mediaType + "\n" + "Genre: " + book.genre + "\n" + "Year: " + book.year + "\n";
+	output << "Title: " + song.title + "\n" + "Composer: " + song.composer + "\n" + "Catagory: " + song.mediaType + "\n" + "Genre: " + song.genre + "\n" + "Year: " + song.year + "\n";
 	
 	return output;
 }
